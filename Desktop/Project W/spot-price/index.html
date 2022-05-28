@@ -8,18 +8,16 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <p>
+    <div>
         <label for="boxWeight">Weight of cargo A (kg)</label>
-        <input type="number" id="boxWeightA"><br>
-        <label for="boxWeight">Weight of cargo b (kg)</label>
-        <input type="number" id="boxWeightB"><br>
-        <label for="boxWeight">Weight of cargo c (kg)</label>
-        <input type="number" id="boxWeightC"><br>
-        <label for="boxWeight">Weight of cargo d (kg)</label>
-        <input type="number" id="boxWeightD"><br>
+        <input type="number" class="boxWeight" id="boxWeightA"><br>
+        <label for="boxWeight">Weight of cargo B (kg)</label>
+        <input type="number" class="boxWeight" id="boxWeightB"><br>
+        <p id="new"></p><button onclick="addBox()">Add box</button>
         <button onclick="getPrice()">submit</button>
         <p id="answer"></p>
-    </p>
+    </div>
+    <p id="testing">0</p>
 <script src="./index.js"></script>
 </body>
 </html>
