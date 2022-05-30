@@ -40,10 +40,10 @@ priceTotal = (a) => {
 
 
 
-
 function addBox() {
 let tag = document.createElement("p");
-let text = document.createTextNode("Tutorix is the best e-learning platform");
+let delli = document.createElement("input");
+let text = document.createTextNode("Weight of cargo");
 tag.appendChild(text);
 let element = document.getElementById("new");
 element.appendChild(tag);}
