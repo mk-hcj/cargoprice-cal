@@ -41,16 +41,18 @@ priceTotal = (a) => {
 
 
 function addBox() {
+let element = document.getElementById("new");
+    //weight of cargo
 let tag = document.createElement("p",);
 let text = document.createTextNode("Weight of cargo");
 tag.append(text);
-let element = document.getElementById("new");
 element.append(tag);
+    //kg
 let tagT = document.createElement("p",);
 let textT = document.createTextNode("(kg)");
 tagT.append(textT);
-let elementT = document.getElementById("new");
-elementT.append(tagT);
+element.append(tagT);
+    //input
 let newForm = document.createElement("input");
 newForm.setAttribute("class", "boxWeight");
 element.append(newForm);
