@@ -1,5 +1,6 @@
 body {
-
+    margin: 0px;
+    padding: 0px;
     display: block;
     width: 100%;
 }
@@ -7,8 +8,15 @@ p {
     justify-content: center;
 }
 
-#new {
- display: flex;
+#new-container {
+ display: block;
  width: 100%;
- height: 16px rem;
+}
+.new-div {
+    display: flex;
+}
+.new-div > p, input {
+    padding: 0px;
+    margin: 0px;
+    font-size: auto;
 }

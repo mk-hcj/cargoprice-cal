@@ -7,53 +7,48 @@ add the following
 over 120cm -> +jpy 10,000/box or 
 over 70kgn -> +jpy 10,500/box
 */
+priceTotal = (a, currentRate) => {
+    return a * 1200 * currentRate + (a * 20) ;
+}
+
+
 function getPrice() {
     let totalWeight = document.getElementsByClassName("boxWeight")[0].value;
+    totalWeight = priceTotal(totalWeight, 1.345)
     let totalPrice = document.getElementById("answer");
     totalPrice.innerText = totalWeight;
 }
 /*const sum = [1, 2, 3].reduce((partialSum, a) => partialSum + a, 0);
 console.log(sum); // 6*/
-priceTotal = (a) => {
-    return a * 1200 * 1.32 + (a * 20) ;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function addBox() {
-let element = document.getElementById("new");
-    //weight of cargo
-let tag = document.createElement("p",);
-let text = document.createTextNode("Weight of cargo");
+let element = document.getElementById("new-container");
+
+let newDiv = document.createElement("div")
+newDiv.setAttribute("class", "new-div")
+element.append(newDiv);
+   //weight of cargo
+let tag = document.createElement("p");
+let text = document.createTextNode("Weight of cargo ");
 tag.append(text);
-element.append(tag);
+newDiv.append(tag);
     //kg
-let tagT = document.createElement("p",);
-let textT = document.createTextNode("(kg)");
+let tagT = document.createElement("p");
+let textT = document.createTextNode(" (kg)");
 tagT.append(textT);
-element.append(tagT);
+newDiv.append(tagT);
     //input
 let newForm = document.createElement("input");
 newForm.setAttribute("class", "boxWeight");
-element.append(newForm);
+newDiv.append(newForm);
+}
+function letterButton() {
+//for (let b = 0; b < 26; b++) {
+    let i = 0;
+    i = i + 1;
+    let li = document.createElement("p");
+    let num = (i+10).toString(36);
+    li.innerHTML = "letter " + num + " ";
+    document.getElementById("letter-main").append(li);
+  //}
 }
