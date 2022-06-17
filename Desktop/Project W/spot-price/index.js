@@ -18,37 +18,23 @@ function getPrice() {
     let totalPrice = document.getElementById("answer");
     totalPrice.innerText = totalWeight;
 }
-/*const sum = [1, 2, 3].reduce((partialSum, a) => partialSum + a, 0);
-console.log(sum); // 6*/
 
+let i = 0;
 function addBox() {
 let element = document.getElementById("new-container");
-
+    //new element
 let newDiv = document.createElement("div")
 newDiv.setAttribute("class", "new-div")
 element.append(newDiv);
-   //weight of cargo
-let tag = document.createElement("p");
-let text = document.createTextNode("Weight of cargo ");
-tag.append(text);
-newDiv.append(tag);
-    //kg
-let tagT = document.createElement("p");
-let textT = document.createTextNode(" (kg)");
-tagT.append(textT);
-newDiv.append(tagT);
+    //labels 
+i += 1;
+let li = document.createElement("p");
+let num = (i+9).toString(36);
+li.innerText = "Weight of cargo " + num.toLocaleUpperCase() + " (kg)";
+newDiv.append(li);
     //input
 let newForm = document.createElement("input");
 newForm.setAttribute("class", "boxWeight");
+newForm.setAttribute("type", "number");
 newDiv.append(newForm);
-}
-function letterButton() {
-//for (let b = 0; b < 26; b++) {
-    let i = 0;
-    i = i + 1;
-    let li = document.createElement("p");
-    let num = (i+10).toString(36);
-    li.innerHTML = "letter " + num + " ";
-    document.getElementById("letter-main").append(li);
-  //}
 }
