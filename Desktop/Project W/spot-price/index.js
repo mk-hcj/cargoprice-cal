@@ -10,19 +10,11 @@ over 70kgn -> +jpy 10,500/box
 priceTotal = (a, currentRate) => {
     return a * 1200 * currentRate + (a * 20) ;
 }
-
-
-function getPrice() {
-    let totalWeight = document.getElementsByClassName("boxWeight")[0].value;
-    totalWeight = priceTotal(totalWeight, 1.345)
-    let totalPrice = document.getElementById("answer");
-    totalPrice.innerText = totalWeight;
-}
-
 let i = 0;
 function addBox() {
 let element = document.getElementById("new-container");
     //new element
+
 let newDiv = document.createElement("div")
 newDiv.setAttribute("class", "new-div")
 element.append(newDiv);
@@ -37,4 +29,12 @@ let newForm = document.createElement("input");
 newForm.setAttribute("class", "boxWeight");
 newForm.setAttribute("type", "number");
 newDiv.append(newForm);
+}
+
+
+function getPrice() {
+    let totalWeight = document.getElementsByClassName("boxWeight")[i].value;
+    totalWeight = priceTotal(totalWeight, 1.345)
+    let totalPrice = document.getElementById("answer");
+    totalPrice.innerText = totalWeight;
 }
